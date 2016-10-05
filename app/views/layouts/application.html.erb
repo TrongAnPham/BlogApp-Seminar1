@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Ec Seminar Hw" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Ec Seminar Hw" %>">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div class="row">
+      </div>
+    <main role="main">
+        <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-5">
+          <p class="text-center">
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+        </div>
+        <div class="col-md-3"></div>
+      
+       
+       </div>
+    </main>
+  </body>
+</html>
